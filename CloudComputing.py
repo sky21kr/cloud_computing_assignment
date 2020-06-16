@@ -33,7 +33,7 @@ def time_average(times):
     sum = 0
     for i in times:
         sum += i
-    return round(sum/len(times), 2)
+    return round(sum/len(times), 4)
 
 
 def init(size):
@@ -64,9 +64,9 @@ def init(size):
             download_time = download_end - download_start
             delete_time = delete_end - delete_start
 
-            upload_times.append(round(upload_time, 2))
-            download_times.append(round(download_time, 2))
-            delete_times.append(round(delete_time, 2))
+            upload_times.append(round(upload_time, 4))
+            download_times.append(round(download_time, 4))
+            delete_times.append(round(delete_time, 4))
 
         print(f"지역: {region}")
         print(f"파일크기: {size}")
@@ -81,8 +81,8 @@ def init(size):
     print("--------------------------------------")
     print("")
 
+
 init("1KB")
 init("10KB")
 init("1MB")
 init("10MB")
-
